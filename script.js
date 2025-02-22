@@ -14,8 +14,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Adicionar efeito de transparência na navbar ao rolar
-function handleScroll() {
+// Header scroll effect
+function handleHeaderScroll() {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -24,26 +24,7 @@ function handleScroll() {
     }
 }
 
-window.addEventListener('scroll', handleScroll);
-
-// Menu Mobile
-const menuButton = document.querySelector('.menu-mobile-button');
-const menuMobile = document.querySelector('.menu-mobile');
-const header = document.querySelector('header');
-
-menuButton.addEventListener('click', () => {
-    menuMobile.classList.toggle('active');
-    menuButton.classList.toggle('active');
-});
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+window.addEventListener('scroll', handleHeaderScroll);
 
 // Smooth scroll para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -186,128 +167,48 @@ if (contactForm) {
     });
 }
 
-// Animações ao Scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementBottom = element.getBoundingClientRect().bottom;
-        
-        if (elementTop < window.innerHeight && elementBottom > 0) {
-            element.classList.add('animate');
-        }
-    });
+// Adicionar lazy loading para imagens
+document.querySelectorAll('img').forEach(img => {
+    img.loading = 'lazy';
+    img.decoding = 'async';
+});
+
+// Otimizar animações
+const animationOptions = {
+    threshold: 0.1,
+    rootMargin: '50px'
 };
 
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll);
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do menu mobile
+    const menuButton = document.querySelector('.menu-mobile-button');
+    const menuMobile = document.querySelector('.menu-mobile');
+    
+    // Toggle do menu ao clicar no botão
+    menuButton.addEventListener('click', function() {
+        menuButton.classList.toggle('active');
+        menuMobile.classList.toggle('active');
+    });
 
-// Adiciona classe para animação em elementos
-document.querySelectorAll('.portfolio-item, .service-card, .pricing-card, .pillar').forEach(el => {
-    el.classList.add('animate-on-scroll');
-});
-
-// Configuração do ScrollReveal
-const sr = ScrollReveal({
-    origin: 'bottom',
-    distance: '60px',
-    duration: 1000,
-    delay: 200,
-    reset: false
-});
-
-// Hero Section
-sr.reveal('.hero-content', {
-    origin: 'left',
-    delay: 100
-});
-sr.reveal('.hero-image', {
-    origin: 'right',
-    delay: 300
-});
-
-// Metodologia
-sr.reveal('.methodology h2', { delay: 100 });
-sr.reveal('.methodology h3', { delay: 200 });
-sr.reveal('.pillar', {
-    delay: 200,
-    interval: 100
-});
-
-// Portfolio
-sr.reveal('.portfolio h2', { delay: 100 });
-sr.reveal('.portfolio h3', { delay: 200 });
-sr.reveal('.portfolio-item', {
-    delay: 200,
-    interval: 100
-});
-
-// Serviços
-sr.reveal('.services h2', { delay: 100 });
-sr.reveal('.services h3', { delay: 200 });
-sr.reveal('.service-card', {
-    delay: 200,
-    interval: 100
-});
-
-// FAQ
-sr.reveal('.faq h2', { delay: 100 });
-sr.reveal('.faq h3', { delay: 200 });
-sr.reveal('.faq-item', {
-    delay: 200,
-    interval: 100
-});
-
-// Contato
-sr.reveal('.contact h2', { delay: 100 });
-sr.reveal('.contact h3', { delay: 200 });
-sr.reveal('.contact-info', {
-    origin: 'left',
-    delay: 300
-});
-sr.reveal('.contact-form', {
-    origin: 'right',
-    delay: 400
-});
-
-// Footer
-sr.reveal('.footer-logo', { delay: 100 });
-sr.reveal('.footer-links', {
-    delay: 200,
-    interval: 100
-});
-sr.reveal('.footer-bottom', { delay: 300 });
-
-// Remover toda a classe do carrossel
-class TestimonialsCarousel {
-    // ... remover toda a classe
-}
-
-// Remover a inicialização do carrossel
-document.addEventListener('DOMContentLoaded', () => {
-    new TestimonialsCarousel();
-});
-
-// Remover as animações do ScrollReveal relacionadas aos depoimentos
-sr.reveal('.testimonials h2', { delay: 100 });
-sr.reveal('.testimonials h3', { delay: 200 });
-sr.reveal('.testimonial-card', {
-    delay: 200,
-    interval: 100
+    // Adicionar efeito de hover no botão CTA
+    const ctaButton = document.querySelector('.cta-button');
+    
+    ctaButton.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        this.style.setProperty('--mouse-x', x + 'px');
+        this.style.setProperty('--mouse-y', y + 'px');
+    });
 });
 
 // Botão Voltar ao Topo
-const backToTopButton = document.getElementById('backToTop');
+const backToTopButton = document.querySelector('.back-to-top');
 
 // Função para verificar a posição do scroll
 function toggleBackToTopButton() {
-    const scrollPosition = window.pageYOffset;
-    const pageHeight = document.documentElement.scrollHeight;
-    const viewportHeight = window.innerHeight;
-    const halfwayPoint = (pageHeight - viewportHeight) / 2;
-
-    if (scrollPosition > halfwayPoint) {
+    if (window.pageYOffset > 300) {
         backToTopButton.classList.add('show');
     } else {
         backToTopButton.classList.remove('show');
@@ -324,16 +225,4 @@ function scrollToTop() {
 
 // Event listeners
 window.addEventListener('scroll', toggleBackToTopButton);
-backToTopButton.addEventListener('click', scrollToTop);
-
-// Adicionar lazy loading para imagens
-document.querySelectorAll('img').forEach(img => {
-    img.loading = 'lazy';
-    img.decoding = 'async';
-});
-
-// Otimizar animações
-const animationOptions = {
-    threshold: 0.1,
-    rootMargin: '50px'
-}; 
+backToTopButton.addEventListener('click', scrollToTop); 
