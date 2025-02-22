@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Leme - Desenvolvimento Web Profissional</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Título do seu site">
+    <meta property="og:description" content="Descrição para redes sociais">
+    <meta property="og:image" content="url-da-imagem">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-text">
+                    WD<span class="gradient-number">3</span>
+                </div>
+            </div>
+            <div class="menu-desktop">
+                <a href="#quem-sou">Quem sou eu</a>
+                <a href="#portfolio">Portifólio</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#planos">Planos de Contratação</a>
+                <a href="#contato" class="cta-button">Solicitar Orçamento</a>
+            </div>
+            <button class="menu-mobile-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <div class="menu-mobile">
+            <a href="#quem-sou">Quem sou eu</a>
+            <a href="#portfolio">Portifólio</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#planos">Planos de Contratação</a>
+            <a href="#contato" class="cta-button">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Tenha hoje um site bonito, rápido e que te gere vendas</h1>
+                <p>Vamos aumentar as vendas do seu negócio? Preencha o formulário e entre em contato com nossa equipe diretamente pelo WhatsApp.</p>
+                <a href="#contato" class="whatsapp-button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+                    Solicitar Orçamento Grátis
+                </a>
+                <div class="clients">
+                    <div class="client-avatars">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Cliente">
+                        <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Cliente">
+                    </div>
+                    <span>+60 clientes satisfeitos</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/images/logo.png" alt="Ilustração de desenvolvimento web">
+            </div>
+        </section>
+
+        <!-- Seção Metodologia -->
+        <section class="methodology" id="metodologia">
+            <h2>METODOLOGIA EXCLUSIVA</h2>
+            <h3>Temos uma metodologia baseada em 4 pilares</h3>
+            
+            <div class="pillars">
+                <div class="pillar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Design Estratégico">
+                    <h4>Design Estratégico</h4>
+                </div>
+                <div class="pillar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1162/1162499.png" alt="Copy Persuasiva">
+                    <h4>Copy Persuasiva</h4>
+                </div>
+                <div class="pillar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1584/1584892.png" alt="Carregamento Rápido">
+                    <h4>Carregamento Rápido</h4>
+                </div>
+                <div class="pillar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/900/900763.png" alt="Responsividade de Telas">
+                    <h4>Responsividade de Telas</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section class="portfolio" id="portfolio">
+            <h2>PORTFÓLIO</h2>
+            <h3>Conheça alguns dos nossos trabalhos</h3>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&auto=format&fit=crop&q=80" alt="E-commerce Moderno">
+                    <div class="portfolio-overlay">
+                        <h4>E-commerce Moderno</h4>
+                        <p>Loja virtual completa</p>
+                        <a href="#" class="btn-view">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="Site Institucional">
+                    <div class="portfolio-overlay">
+                        <h4>Site Institucional</h4>
+                        <p>Website corporativo</p>
+                        <a href="#" class="btn-view">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&auto=format&fit=crop&q=80" alt="Landing Page">
+                    <div class="portfolio-overlay">
+                        <h4>Landing Page</h4>
+                        <p>Página de conversão otimizada</p>
+                        <a href="#" class="btn-view">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section class="services" id="servicos">
+            <h2>SERVIÇOS</h2>
+            <h3>Soluções completas para seu negócio digital</h3>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Design">
+                    <h4>Web Design</h4>
+                    <p>Sites modernos e otimizados para conversão de vendas</p>
+                    <ul>
+                        <li>Design Responsivo</li>
+                        <li>UX/UI Design</li>
+                        <li>Otimização SEO</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="E-commerce">
+                    <h4>E-commerce</h4>
+                    <p>Lojas virtuais completas e profissionais</p>
+                    <ul>
+                        <li>Integração com pagamentos</li>
+                        <li>Gestão de produtos</li>
+                        <li>Relatórios de vendas</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1968/1968666.png" alt="Marketing Digital">
+                    <h4>Marketing Digital</h4>
+                    <p>Estratégias para aumentar suas vendas</p>
+                    <ul>
+                        <li>SEO Avançado</li>
+                        <li>Google Ads</li>
+                        <li>Análise de Dados</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Planos -->
+        <section class="pricing" id="planos">
+            <h2>PLANOS</h2>
+            <h3>Escolha o melhor plano para seu negócio</h3>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Básico</h4>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">997</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li>Site One Page</li>
+                        <li>Design Responsivo</li>
+                        <li>3 Seções</li>
+                        <li>Formulário de Contato</li>
+                        <li>Whatsapp Business</li>
+                    </ul>
+                    <a href="#contato" class="btn-pricing">Contratar Agora</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h4>Profissional</h4>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">1997</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li>Site Completo</li>
+                        <li>Design Premium</li>
+                        <li>7 Seções</li>
+                        <li>Blog Integrado</li>
+                        <li>SEO Básico</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <a href="#contato" class="btn-pricing">Contratar Agora</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">4997</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li>E-commerce Completo</li>
+                        <li>Design Personalizado</li>
+                        <li>Páginas Ilimitadas</li>
+                        <li>SEO Avançado</li>
+                        <li>Marketing Digital</li>
+                        <li>Suporte Prioritário</li>
+                    </ul>
+                    <a href="#contato" class="btn-pricing">Contratar Agora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section class="faq" id="faq">
+            <h2>DÚVIDAS FREQUENTES</h2>
+            <h3>Tire suas dúvidas</h3>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quanto tempo leva para criar um site?</h4>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O prazo médio é de 15 a 30 dias, dependendo da complexidade do projeto.</p>
+                    </div>
+                </div>
+                <!-- Adicione mais perguntas aqui -->
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section class="contact" id="contato">
+            <h2>CONTATO</h2>
+            <h3>Vamos começar seu projeto?</h3>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h4>Fale Conosco</h4>
+                    <p>Preencha o formulário ou entre em contato através dos canais abaixo:</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5511999999999" class="contact-method whatsapp">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:contato@pauloleme.com.br" class="contact-method email">
+                            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" id="name-label">Nome</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" " required>
+                        <label for="phone">Telefone</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-text">
+                    WD<span class="gradient-number">3</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Menu</h4>
+                    <a href="#quem-sou">Quem sou eu</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#planos">Planos</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <a href="tel:+5511999999999">Telefone</a>
+                    <a href="mailto:contato@pauloleme.com.br">Email</a>
+                    <a href="https://wa.me/5511999999999">WhatsApp</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+                        <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Paulo Leme. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
